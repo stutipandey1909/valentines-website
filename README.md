@@ -7,20 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    .surprise-link {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 14px 28px;
-  background: #ff4d6d;
-  color: white;
-  text-decoration: none;
-  border-radius: 30px;
-  font-size: 16px;
-}
-
-.surprise-link:hover {
-  background: #e63b5f;
-}
 
     .tiny-heart {
   font-size: 40px;
@@ -35,7 +21,20 @@
   border-radius: 25px;
   box-shadow: 0 15px 30px rgba(0,0,0,0.15);
 }
+    .surprise-link {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 28px;
+  background: #ff4d6d;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 16px;
+}
 
+.surprise-link:hover {
+  background: #e63b5f;
+}
 .question-box h1 {
   color: #ff4d6d;
 }
