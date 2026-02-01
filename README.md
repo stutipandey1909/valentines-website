@@ -7,6 +7,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+    .surprise-link {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 28px;
+  background: #ff4d6d;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 16px;
+}
+
+.surprise-link:hover {
+  background: #e63b5f;
+}
+
     .tiny-heart {
   font-size: 40px;
   margin-bottom: 15px;
@@ -150,6 +165,10 @@
     </p>
   </div>
 </div>
+
+<a href="letter.html" class="surprise-link">
+  Click here for a SURPRISE! 💌
+</a>
 
 <script>
   /* NO BUTTON RUNS */
