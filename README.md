@@ -10,7 +10,7 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom right, #ff9a9e, #fad0c4);
+      background: linear-gradient(to bottom right, #ff9a9e, #cbe3e5);
       text-align: center;
       color: white;
       height: 100vh;
