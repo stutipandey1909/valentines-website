@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Since you didn't have time to ask, i thought i'll do it. Will you be my Valentine? 😏❤️</title>
+  <title>Since you didn't have time to ask, i thought i'll do it. 
+    Will you be my Valentine? 😏❤️</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -93,7 +94,8 @@
 <canvas id="confetti"></canvas>
 
 <div class="container">
-  <h1>Since you didn't have time to ask, i thought i'll do it. Will you be my Valentine? 😏❤️</h1>
+  <h1>Since you didn't have time to ask, i thought i'll do it. 
+    Will you be my Valentine? 😏❤️</h1>
   <p>There is only one correct answer.</p>
 
   <div class="buttons" id="question">
