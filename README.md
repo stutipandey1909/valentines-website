@@ -1,8 +1,9 @@
 # valentines-website
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>You've to make the right choice. Be My Valentine 😏❤️</title>
+  <title>Since you didn't have time to ask, i thought i'll do it. Will you be my Valentine? 😏❤️</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -13,26 +14,35 @@
       text-align: center;
       color: white;
       height: 100vh;
-      overflow: hidden;
+      overflow-x: hidden;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 999;
     }
 
     .container {
-      padding-top: 80px;
+      padding-top: 70px;
     }
 
     h1 {
       font-size: 42px;
-      margin-bottom: 10px;
     }
 
     p {
       font-size: 20px;
-      margin-bottom: 30px;
+      margin: 20px auto;
+      max-width: 600px;
     }
 
     .buttons {
       position: relative;
       height: 200px;
+      margin-top: 30px;
     }
 
     button {
@@ -55,34 +65,8 @@
       position: absolute;
     }
 
-    #result {
-      font-size: 24px;
-      margin-top: 40px;
-      display: none;
-    }
-  </style>
-</head>
-
-<body>
-
-  <div class="container">
-    <h1>You've to make the right choice. Be My Valentine 😏❤️</h1>
-    <p>Important question. Think carefully.</p>
-
-    <div class="buttons">
-      <button id="yesBtn" onclick="yesClicked()">YES 💖</button>
-      <button id="noBtn">NO 🙄</button>
-    </div>
-
-    <div id="result">
-      🥰 Knew it.  
-      Congratulations 🎉  
-      You’re officially stuck with me as your Valentine ❤️😌  
-      No take-backs 😌
-    </div>
-  </div>
-
-#afterYes {
+    /* AFTER YES */
+    #afterYes {
       display: none;
       margin-top: 40px;
     }
@@ -100,83 +84,121 @@
       height: 220px;
       object-fit: cover;
       border-radius: 20px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
     }
   </style>
 </head>
 
 <body>
 
-  <div class="container">
-    <h1>Be My Valentine 😌❤️</h1>
-    <p>Choose wisely. There is only one correct answer.</p>
+<canvas id="confetti"></canvas>
 
-    <div class="buttons" id="question">
-      <button id="yesBtn" onclick="yesClicked()">YES 💖</button>
-      <button id="noBtn">NO 🙄</button>
-    </div>
-    <div id="afterYes">
-      <h1>🥰 KNEW IT</h1>
-      <p>
-        Congratulations 🎉  
-        You just unlocked exclusive access to  
-        *Us Being Cute™* 💕
-      </p>
+<div class="container">
+  <h1>Since you didn't have time to ask, i thought i'll do it. Will you be my Valentine? 😏❤️</h1>
+  <p>There is only one correct answer.</p>
 
-      <div class="photos">
-        <img src="photo1.jpg" alt="You❤️">
-        <img src="photo2.jpg" alt="My favorite sketch">
-        <img src="photo3.jpg" alt="Dangerously cute">
-      </div>
-
-      <p>
-        Sorry, no refunds.  
-        You’re officially stuck with me now 😌❤️
-      </p>
-    </div>
+  <div class="buttons" id="question">
+    <button id="yesBtn" onclick="yesClicked()">YES 💖</button>
+    <button id="noBtn">NO 🙄</button>
   </div>
 
-  <script>
-    const noBtn = document.getElementById("noBtn");
+  <div id="afterYes">
+    <h1>🎉 YAYYY 🎉</h1>
+    <p>
+      Smart choice 😌  
+      You’ve officially unlocked  
+      *Us Being Cute™* 💕
+    </p>
 
-    noBtn.addEventListener("mouseover", moveNoButton);
-    noBtn.addEventListener("click", moveNoButton);
+    <div class="photos">
+      <img src="photo1.jpg">
+      <img src="photo2.jpg">
+      <img src="photo3.jpg">
+    </div>
 
-    function moveNoButton() {
-      const x = Math.random() * (window.innerWidth - 120);
-      const y = Math.random() * (window.innerHeight - 60);
+    <p>
+      No escape now.  
+      You’re stuck with me ❤️😏
+    </p>
+  </div>
+</div>
 
-      noBtn.style.left = x + "px";
-      noBtn.style.top = y + "px";
+<script>
+  /* NO BUTTON RUNS AWAY */
+  const noBtn = document.getElementById("noBtn");
+
+  noBtn.addEventListener("mouseover", moveNoButton);
+  noBtn.addEventListener("click", moveNoButton);
+
+  function moveNoButton() {
+    const x = Math.random() * (window.innerWidth - 120);
+    const y = Math.random() * (window.innerHeight - 60);
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+  }
+
+  /* CONFETTI LOGIC */
+  const canvas = document.getElementById("confetti");
+  const ctx = canvas.getContext("2d");
+  let confettiPieces = [];
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  window.addEventListener("resize", resizeCanvas);
+  resizeCanvas();
+
+  function createConfetti() {
+    confettiPieces = [];
+    for (let i = 0; i < 200; i++) {
+      confettiPieces.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height - canvas.height,
+        r: Math.random() * 6 + 4,
+        d: Math.random() * 200,
+        color: `hsl(${Math.random() * 360}, 100%, 60%)`,
+        tilt: Math.random() * 10 - 10
+      });
     }
+  }
 
-    function yesClicked() {
-      document.getElementById("question").style.display = "none";
-      document.getElementById("afterYes").style.display = "block";
-    }
-  </script>
+  function drawConfetti() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    confettiPieces.forEach(p => {
+      ctx.beginPath();
+      ctx.fillStyle = p.color;
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    });
+    updateConfetti();
+  }
 
-</body>
-</html>
-  <script>
-    const noBtn = document.getElementById("noBtn");
+  function updateConfetti() {
+    confettiPieces.forEach(p => {
+      p.y += Math.cos(p.d) + 4;
+      p.x += Math.sin(p.d);
+      if (p.y > canvas.height) {
+        p.y = -10;
+      }
+    });
+  }
 
-    noBtn.addEventListener("mouseover", moveNoButton);
-    noBtn.addEventListener("click", moveNoButton);
+  function startConfetti() {
+    createConfetti();
+    const interval = setInterval(drawConfetti, 20);
+    setTimeout(() => {
+      clearInterval(interval);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }, 3000);
+  }
 
-    function moveNoButton() {
-      const x = Math.random() * (window.innerWidth - 120);
-      const y = Math.random() * (window.innerHeight - 60);
-
-      noBtn.style.left = x + "px";
-      noBtn.style.top = y + "px";
-    }
-
-    function yesClicked() {
-      document.querySelector(".buttons").style.display = "none";
-      document.getElementById("result").style.display = "block";
-    }
-  </script>
+  function yesClicked() {
+    startConfetti();
+    document.getElementById("question").style.display = "none";
+    document.getElementById("afterYes").style.display = "block";
+  }
+</script>
 
 </body>
 </html>
