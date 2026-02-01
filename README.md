@@ -8,7 +8,7 @@
 
   <style>
     .tiny-heart {
-  font-size: 26px;
+  font-size: 40px;
   margin-bottom: 15px;
 }
     .question-box {
