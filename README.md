@@ -12,7 +12,7 @@
   <style>
 .top-image {
   width: 220px;
-  max-width: 50%;
+  max-width: 60%;
   border-radius: 20px;
   margin-bottom: 25px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.25);
