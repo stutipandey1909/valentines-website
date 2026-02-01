@@ -10,6 +10,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+.top-image {
+  width: 220px;
+  max-width: 50%;
+  border-radius: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
     body {
       margin: 0;
       font-family: Arial, sans-serif;
