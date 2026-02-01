@@ -2,20 +2,12 @@
 
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
- <img src="top-image.webp" alt="Us" class="top-image">
   
   <title>Since you didn't have time to ask, i thought i'll do it. 
     Will you be my Valentine? 😏❤️</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-.top-image {
-  width: 220px;
-  max-width: 70%;
-  border-radius: 20px;
-  margin-bottom: 10px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
     body {
       margin: 0;
