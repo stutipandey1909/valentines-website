@@ -29,11 +29,11 @@
     }
 
     h1 {
-      font-size: 42px;
+      font-size: 50px;
     }
 
     p {
-      font-size: 20px;
+      font-size: 40px;
       margin: 20px auto;
       max-width: 600px;
     }
@@ -46,7 +46,7 @@
 
     button {
       padding: 14px 30px;
-      font-size: 16px;
+      font-size: 20px;
       border-radius: 30px;
       border: none;
       cursor: pointer;
@@ -79,8 +79,8 @@
     }
 
     .photos img {
-      width: 220px;
-      height: 220px;
+      width: 250px;
+      height: 250px;
       object-fit: cover;
       border-radius: 20px;
       box-shadow: 0 10px 20px rgba(0,0,0,0.25);
@@ -106,7 +106,7 @@
     <p>
       Smart choice 😌  
       You’ve officially unlocked  
-      *Us Being Cute™* 💕
+      *Us Being Cute* 💕
     </p>
 
     <div class="photos">
