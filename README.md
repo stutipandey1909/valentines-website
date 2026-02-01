@@ -135,7 +135,9 @@
       <img src="photo1.jpeg">
       <img src="photo2.jpeg">
       <img src="photo3.jpeg">
-       <img src="photo4.jpeg">
+      <img src="photo4.jpeg">
+      <img src="photo5.jpeg">
+      <img src="photo6.jpeg">
     </div>
 
     <p>
