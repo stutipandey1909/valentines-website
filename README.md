@@ -11,7 +11,7 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom right, #ff9a9e, #fad0c4);
+      background: linear-gradient(to bottom right, #ff9a9e, #cbe3e5);
       text-align: center;
       color: white;
       height: 100vh;
@@ -111,18 +111,19 @@
     <h1>🎉 YAYYY 🎉</h1>
     <p>
       Look at you making great life choices 😌  
-      Music, confetti, memories…  
-      this is your reward 💕
+      Now don't expect a gift because,
+      I am your biggest gift 💕
     </p>
 
     <div class="photos">
       <img src="photo1.jpeg">
       <img src="photo2.jpeg">
       <img src="photo3.jpeg">
+       <img src="photo4.jpeg">
     </div>
 
     <p>
-      You + Me = Valentine’s Day sorted ❤️😏
+      You better be happy because this took me 2 hours to build❤️😏
     </p>
   </div>
 </div>
