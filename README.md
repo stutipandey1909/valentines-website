@@ -168,9 +168,6 @@
   </div>
 </div>
 
-<a href="letter.html" class="surprise-link">
-  Click here for a SURPRISE! 💌
-</a>
 
 <script>
   /* NO BUTTON RUNS */
