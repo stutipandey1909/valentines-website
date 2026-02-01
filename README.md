@@ -1,10 +1,9 @@
 # valentines-website
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Valentine’s ❤️</title>
+    <title>Happy Valentine’s Day Baby ❤️</title>
     <style>
         body {
             margin: 0;
@@ -14,10 +13,10 @@
             text-align: center;
         }
         .container {
-            padding: 60px 20px;
+            padding: 80px 40px;
         }
         h1 {
-            font-size: 48px;
+            font-size: 60px;
         }
         p {
             font-size: 20px;
@@ -38,7 +37,7 @@
             background-color: #ffe6eb;
         }
         .heart {
-            font-size: 40px;
+            font-size: 80px;
             animation: pulse 1.5s infinite;
         }
         @keyframes pulse {
