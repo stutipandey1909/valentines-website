@@ -3,10 +3,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Be My Valentine 😏❤️</title>
+  <title>Since you didn't have time to ask, i thought i'll do it. Will you be my Valentine? 😏❤️</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+    .question-box {
+  background: white;
+  color: #ff4d6d;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 40px 30px;
+  border-radius: 25px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.question-box h1 {
+  color: #ff4d6d;
+}
+
+.question-box p {
+  color: #555;
+  margin-top: 15px;
+}
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -96,7 +114,7 @@
   <source src="Espresso.mp3" type="audio/mpeg">
 </audio>
 
-<div class="container">
+<div class="question-box">
   <h1>Since you didn't have time to ask, i thought i'll do it. Will you be my Valentine? 😏❤️</h1>
   <p>There is only one correct answer.</p>
 
