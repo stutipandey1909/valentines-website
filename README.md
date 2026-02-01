@@ -76,11 +76,88 @@
 
     <div id="result">
       🥰 Knew it.  
-      You’re officially my Valentine now ❤️  
+      Congratulations 🎉  
+      You’re officially stuck with me as your Valentine ❤️😌  
       No take-backs 😌
     </div>
   </div>
 
+#afterYes {
+      display: none;
+      margin-top: 40px;
+    }
+
+    .photos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .photos img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Be My Valentine 😌❤️</h1>
+    <p>Choose wisely. There is only one correct answer.</p>
+
+    <div class="buttons" id="question">
+      <button id="yesBtn" onclick="yesClicked()">YES 💖</button>
+      <button id="noBtn">NO 🙄</button>
+    </div>
+    <div id="afterYes">
+      <h1>🥰 KNEW IT</h1>
+      <p>
+        Congratulations 🎉  
+        You just unlocked exclusive access to  
+        *Us Being Cute™* 💕
+      </p>
+
+      <div class="photos">
+        <img src="photo1.jpg" alt="You❤️">
+        <img src="photo2.jpg" alt="My favorite sketch">
+        <img src="photo3.jpg" alt="Dangerously cute">
+      </div>
+
+      <p>
+        Sorry, no refunds.  
+        You’re officially stuck with me now 😌❤️
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("noBtn");
+
+    noBtn.addEventListener("mouseover", moveNoButton);
+    noBtn.addEventListener("click", moveNoButton);
+
+    function moveNoButton() {
+      const x = Math.random() * (window.innerWidth - 120);
+      const y = Math.random() * (window.innerHeight - 60);
+
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    }
+
+    function yesClicked() {
+      document.getElementById("question").style.display = "none";
+      document.getElementById("afterYes").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
   <script>
     const noBtn = document.getElementById("noBtn");
 
