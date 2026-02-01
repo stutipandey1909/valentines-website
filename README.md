@@ -1,4 +1,5 @@
 # valentines-website
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -30,11 +31,11 @@
     }
 
     h1 {
-      font-size: 50px;
+      font-size: 42px;
     }
 
     p {
-      font-size: 40px;
+      font-size: 20px;
       margin: 20px auto;
       max-width: 600px;
     }
@@ -47,7 +48,7 @@
 
     button {
       padding: 14px 30px;
-      font-size: 20px;
+      font-size: 16px;
       border-radius: 30px;
       border: none;
       cursor: pointer;
@@ -65,7 +66,6 @@
       position: absolute;
     }
 
-    /* AFTER YES */
     #afterYes {
       display: none;
       margin-top: 40px;
@@ -80,8 +80,8 @@
     }
 
     .photos img {
-      width: 250px;
-      height: 250px;
+      width: 220px;
+      height: 220px;
       object-fit: cover;
       border-radius: 20px;
       box-shadow: 0 10px 20px rgba(0,0,0,0.25);
@@ -93,9 +93,13 @@
 
 <canvas id="confetti"></canvas>
 
+<!-- MUSIC -->
+<audio id="loveSong">
+  <source src="Espresso.mp3" type="audio/mpeg">
+</audio>
+
 <div class="container">
-  <h1>Since you didn't have time to ask, i thought i'll do it. 
-    Will you be my Valentine? 😏❤️</h1>
+  <h1>Since you didn't have time to ask, i thought i'll do it. Will you be my Valentine? 😏❤️</h1>
   <p>There is only one correct answer.</p>
 
   <div class="buttons" id="question">
@@ -106,9 +110,9 @@
   <div id="afterYes">
     <h1>🎉 YAYYY 🎉</h1>
     <p>
-      Smart choice 😌  
-      You’ve officially unlocked  
-      *Us Being Cute* 💕
+      Look at you making great life choices 😌  
+      Music, confetti, memories…  
+      this is your reward 💕
     </p>
 
     <div class="photos">
@@ -118,15 +122,13 @@
     </div>
 
     <p>
-      No escape now.  
-      
-      You’re stuck with me ❤️😏
+      You + Me = Valentine’s Day sorted ❤️😏
     </p>
   </div>
 </div>
 
 <script>
-  /* NO BUTTON RUNS AWAY */
+  /* NO BUTTON RUNS */
   const noBtn = document.getElementById("noBtn");
 
   noBtn.addEventListener("mouseover", moveNoButton);
@@ -139,50 +141,39 @@
     noBtn.style.top = y + "px";
   }
 
-  /* CONFETTI LOGIC */
+  /* CONFETTI */
   const canvas = document.getElementById("confetti");
   const ctx = canvas.getContext("2d");
-  let confettiPieces = [];
+  let confetti = [];
 
-  function resizeCanvas() {
+  function resize() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
   }
-  window.addEventListener("resize", resizeCanvas);
-  resizeCanvas();
+  window.addEventListener("resize", resize);
+  resize();
 
   function createConfetti() {
-    confettiPieces = [];
+    confetti = [];
     for (let i = 0; i < 200; i++) {
-      confettiPieces.push({
+      confetti.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height - canvas.height,
         r: Math.random() * 6 + 4,
-        d: Math.random() * 200,
         color: `hsl(${Math.random() * 360}, 100%, 60%)`,
-        tilt: Math.random() * 10 - 10
+        speed: Math.random() * 3 + 2
       });
     }
   }
 
   function drawConfetti() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    confettiPieces.forEach(p => {
+    confetti.forEach(p => {
       ctx.beginPath();
       ctx.fillStyle = p.color;
       ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
       ctx.fill();
-    });
-    updateConfetti();
-  }
-
-  function updateConfetti() {
-    confettiPieces.forEach(p => {
-      p.y += Math.cos(p.d) + 4;
-      p.x += Math.sin(p.d);
-      if (p.y > canvas.height) {
-        p.y = -10;
-      }
+      p.y += p.speed;
     });
   }
 
@@ -197,6 +188,10 @@
 
   function yesClicked() {
     startConfetti();
+
+    const song = document.getElementById("loveSong");
+    song.play();
+
     document.getElementById("question").style.display = "none";
     document.getElementById("afterYes").style.display = "block";
   }
