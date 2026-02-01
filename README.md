@@ -1,8 +1,10 @@
 # valentines-website
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+ <img src="top-image.webp" alt="Us" class="top-image">
+  
   <title>Since you didn't have time to ask, i thought i'll do it. 
     Will you be my Valentine? 😏❤️</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
