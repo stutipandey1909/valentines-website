@@ -2,23 +2,20 @@
 
 <html lang="en">
 <head>
-  
-  <title>Since you didn't have time to ask, i thought i'll do it. 
-    Will you be my Valentine? 😏❤️</title>
+  <meta charset="UTF-8">
+  <title>Be My Valentine 😏❤️</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-}
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom right, #ff9a9e, #cbe3e5);
+      background: linear-gradient(to bottom right, #ff9a9e, #fad0c4);
       text-align: center;
       color: white;
       height: 100vh;
       overflow-x: hidden;
     }
-
     canvas {
       position: fixed;
       top: 0;
