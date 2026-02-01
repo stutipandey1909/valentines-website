@@ -7,6 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+    .tiny-heart {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
     .question-box {
   background: white;
   color: #ff4d6d;
@@ -115,6 +119,7 @@
 </audio>
 
 <div class="question-box">
+  <div class="tiny-heart">❤️</div>
   <h1>Since you didn't have time to ask, i thought i'll do it. Will you be my Valentine? 😏❤️</h1>
   <p>There is only one correct answer.</p>
 
