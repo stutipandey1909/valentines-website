@@ -111,9 +111,9 @@
     </p>
 
     <div class="photos">
-      <img src="photo1.jpg">
-      <img src="photo2.jpg">
-      <img src="photo3.jpg">
+      <img src="photo1.jpeg">
+      <img src="photo2.jpeg">
+      <img src="photo3.jpeg">
     </div>
 
     <p>
