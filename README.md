@@ -160,7 +160,7 @@
     </div>
 
     <p>
-      You better be happy because this took me 2 hours to build❤️😏
+      You better be happy because this took me 3 hours to build❤️😏
     </p>
     <a href="letter.html" class="surprise-link">
   Click here for a surprise 💌
