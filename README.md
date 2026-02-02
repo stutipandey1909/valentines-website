@@ -149,7 +149,7 @@
 
 <div class="question-box">
   <div class="tiny-heart">❤️</div>
-  <h1>Since you didn't have time to ask, i thought i'll do it. Will you be my Valentine? 😏❤️</h1>
+  <h1>Since you did NOT have time to ask, i thought i'll only do it. Will you be my V-A-L-E-N-T-I-N-E? 😏❤️ (huh) </h1>
   <p>There is only one correct answer.</p>
 
   <div class="buttons" id="question">
@@ -162,7 +162,7 @@
     <h1>🎉 YAYYY 🎉</h1>
     <p>
       Look at you making great life choices 😌  
-      Now don't expect a gift because,
+      Now do not expect a gift because,
       I am your biggest gift 💕
     </p>
 
