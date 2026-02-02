@@ -21,6 +21,21 @@
   border-radius: 25px;
   box-shadow: 0 15px 30px rgba(0,0,0,0.15);
 }
+    #yesBtn {
+  animation: yesPulse 1.8s infinite;
+}
+
+@keyframes yesPulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 rgba(255,77,109,0.4); }
+  50% { transform: scale(1.08); box-shadow: 0 0 20px rgba(255,77,109,0.6); }
+  100% { transform: scale(1); box-shadow: 0 0 0 rgba(255,77,109,0.4); }
+}
+.tiny-text {
+  font-size: 14px;
+  color: #777;
+  margin-top: 15px;
+}
+
     .surprise-link {
   display: inline-block;
   margin-top: 25px;
@@ -141,6 +156,7 @@
     <button id="yesBtn" onclick="yesClicked()">YES 💖</button>
     <button id="noBtn">NO 🙄</button>
   </div>
+<p class="tiny-text">Wrong answers will be ignored 😌</p>
 
   <div id="afterYes">
     <h1>🎉 YAYYY 🎉</h1>
@@ -177,6 +193,9 @@
   noBtn.addEventListener("click", moveNoButton);
 
   function moveNoButton() {
+    const noTexts = ["NO 😭", "WAIT 😳", "OKAY STOP", "WHY THO", "NOT FAIR"];
+noBtn.innerText = noTexts[Math.floor(Math.random() * noTexts.length)];
+    
     const x = Math.random() * (window.innerWidth - 120);
     const y = Math.random() * (window.innerHeight - 60);
     noBtn.style.left = x + "px";
